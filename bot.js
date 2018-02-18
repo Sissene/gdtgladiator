@@ -7,10 +7,10 @@ bot.on('ready', function () {
 
 
 
-bot.on('message', function (message) {
-    if (message.content === '!tournament') {
+bot.on('message', (message) => {
+    if(msg.content.startsWith("!tournament")){
         message.channel.send('The Tournament Will Start Soon !')
-    }
+       }
 })
 
 bot.login(process.env.BOT_TOKEN)
