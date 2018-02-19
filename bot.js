@@ -17,13 +17,14 @@ bot.on("ready", async () => {
     let args = messageArray.slice(1);
     
     if(cmd === `${prefix}botinfo`){
+      
       let bicon = bot.user.displayAvatarURL;  
       let botembed = new Discord.RichEmbed()
        .setDescription("Bot Information")
        .setColor("#48f442")
        .setThumbnail(bicon)
-       .addField("Bot Name", bot.user.username
-       .addField("Created At", bot.user.createdAt);          
+       .addField("Bot Name", bot.user.username)
+       .addField("Created At", bot.user.createdAt);
       
  
       
@@ -38,5 +39,4 @@ bot.on("ready", async () => {
 
 
 
-bot.login(process.env.BOT_TOKEN)
-//dd
+bot.login (process.env.BOT_TOKEN)
