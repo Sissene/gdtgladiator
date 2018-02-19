@@ -16,6 +16,15 @@ bot.on("ready", async () => {
     let cmd = messageArray[0];
     let args = messageArray.slice(1);
     
+     if(cmd === `${prefix}ping`){
+        message.send.channel (message.client.ping)
+
+
+      return;
+    }
+    
+    
+    
     if(cmd === `${prefix}serverinfo`){
 
        let sicon = message.guild.iconURL;
