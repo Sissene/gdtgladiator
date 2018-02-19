@@ -8,11 +8,13 @@ bot.on("ready", async () => {
   bot.user.setActivity("GDT2RC Soon !", {type: "WATCHING"});
   
   bot.on("message", async message => {
+     if(message.author.bot) return;
+     if(message.channel.type === "dm") return;
  
     let prefix = botconfig.prefix;
-  let messageArray = message.content.split(" ");
-  let cmd = messageArray[0];
-  let args = messageArray.slice(1);
+    let messageArray = message.content.split(" ");
+    let cmd = messageArray[0];
+    let args = messageArray.slice(1);
     
     if(cmd === `${prefix}botinfo`){
        
