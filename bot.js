@@ -20,10 +20,11 @@ bot.on("ready", async () => {
       
       let bicon = bot.user.displayAvatarURL;  
       let botembed = new Discord.RichEmbed()
-       .setDescription("Bot Information")
+       
        .setColor("#48f442")
        .setThumbnail(bicon)
        .addField("Bot Name", bot.user.username)
+       .setDescription("Bot Created by Sissene !")
        .addField("Created At", bot.user.createdAt);
       
  
