@@ -39,3 +39,4 @@ bot.on("ready", async () => {
 
 
 bot.login(process.env.BOT_TOKEN)
+//dd
