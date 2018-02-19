@@ -16,7 +16,7 @@ bot.on("ready", async () => {
     let cmd = messageArray[0];
     let args = messageArray.slice(1);
     
-    if(cmd === `${prefix}botinfo`){
+    if(cmd === `${prefix}serverinfo`){
 
        let sicon = message.guild.iconURL;
        let serverembed = new Discord.RichEmbed()
