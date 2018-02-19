@@ -5,7 +5,7 @@ bot.on("ready", async () => {
   console.log(`${bot.user.username} is online!`);
 
   bot.user.setActivity("GDT2RC Soon !", {type: "WATCHING"})
-  bot.user.setGame("GDT2RC Soon!");
+ 
 
   
 });
