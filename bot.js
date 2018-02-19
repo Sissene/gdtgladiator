@@ -17,6 +17,32 @@ bot.on("ready", async () => {
     let args = messageArray.slice(1);
     
     if(cmd === `${prefix}botinfo`){
+
+       let sicon = message.guild.displayAvatarURL;
+       let serverembed = new Discord.RichEmbed()
+         .setThumbnail(sicon)
+         .setColor("#48f442")
+         .addField("Server ID", message.guild.id)
+         .addField("Server Name", message.guild.name)
+         .addField("Created On", message.guild.createdAt)
+         .addField("Members Count", message.guild.memberCount)
+
+
+
+         return message.channel.send(serverembed);
+
+
+
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    if(cmd === `${prefix}botinfo`){
       
       let bicon = bot.user.displayAvatarURL;  
       let botembed = new Discord.RichEmbed()
