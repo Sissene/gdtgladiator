@@ -17,11 +17,13 @@ bot.on("ready", async () => {
     let args = messageArray.slice(1);
     
     if(cmd === `${prefix}botinfo`){
-       
+      let bicon = bot.user.displayAvatarURL;  
       let botembed = new Discord.RichEmbed()
        .setDescription("Bot Information")
        .setColor("#48f442")
-       .addField("Bot Name", bot.user.username);
+       .setThumbnail(bicon)
+       .addField("Bot Name", bot.user.username
+       .addField("Created At", bot.user.createdAt);          
       
  
       
