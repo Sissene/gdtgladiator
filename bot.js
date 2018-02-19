@@ -18,7 +18,7 @@ bot.on("ready", async () => {
     
     if(cmd === `${prefix}botinfo`){
 
-       let sicon = message.guild.displayAvatarURL;
+       let sicon = message.guild.iconURL;
        let serverembed = new Discord.RichEmbed()
          .setThumbnail(sicon)
          .setColor("#48f442")
