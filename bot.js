@@ -3,13 +3,15 @@ const Discord = require('discord.js')
 const bot = new Discord.Client({disableEveryone: true});
 
 bot.on("ready", async () => {
-  console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
+    console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
 
   bot.user.setActivity("GDT2RC Soon !", {type: "WATCHING"})});
   
   bot.on("message", async message => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
+   
+
   
     let prefix = botconfig.prefix;
     let messageArray = message.content.split(" ");
@@ -51,6 +53,7 @@ bot.on("ready", async () => {
       let bReason = args.join(" ").slice(22);
       if(!message.member.hasPermission("MANAGE_MEMBERS")) return message.channel.send("You haven't Higher Rank !");
       if(bUser.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Can't Ban Personn Higher Rank !");
+     
   
       let banEmbed = new Discord.RichEmbed()
       .setDescription("~Ban~")
@@ -80,6 +83,7 @@ bot.on("ready", async () => {
       .setDescription("GDT Clan Bot")
       .setColor("#48f442")
       .setThumbnail(sicon)
+      .addField("Owner", bot.author.username)
       .addField("Created On", bot.user.createdAt)
       
      
@@ -98,7 +102,7 @@ bot.on("ready", async () => {
        let serverembed = new Discord.RichEmbed()
          .setThumbnail(sicon)
          .setColor("#48f442")
-         .addField("Server ID", "ID : "+message.guild.id)
+         .addField("Server ID", "ID ="+message.guild.id)
          .addField("Server Name", message.guild.name)
          .addField("Created On", message.guild.createdAt)
          .addField("Members Count", message.guild.memberCount)
