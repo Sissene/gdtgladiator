@@ -15,6 +15,7 @@ bot.on("ready", async () => {
     let messageArray = message.content.split(" ");
     let cmd = messageArray[0];
     let args = messageArray.slice(1);
+  
     
     if(cmd === `${prefix}kick`){
 
@@ -42,7 +43,7 @@ bot.on("ready", async () => {
     kickChannel.send(kickEmbed);
 
     return;
-  }
+  }});
       
   if(cmd === `${prefix}ban`){
 
@@ -74,20 +75,20 @@ bot.on("ready", async () => {
   if(cmd === `${prefix}botinfo`){
 
     let sicon = bot.user.avatarURL;
-    let botembed = new Discord.RichEmbed()
+    let serverembed = new Discord.RichEmbed()
       .setAuthor("Owner")
       .setDescription("GDT Clan Bot")
       .setColor("#48f442")
       .setThumbnail(sicon)
-      .addField("Created On", message.bot.createdAt)
+      .addField("Created On", bot.user.createdAt)
       
      
 
-      return message.channel.send(botembed);
+      return message.channel.send(serverembed);
 
 
 
- }
+ };
     
     
     
@@ -97,7 +98,7 @@ bot.on("ready", async () => {
        let serverembed = new Discord.RichEmbed()
          .setThumbnail(sicon)
          .setColor("#48f442")
-         .addField("Server ID", "ID : "+message.guild.id)
+         .addField("Server ID", "ID ="+message.guild.id)
          .addField("Server Name", message.guild.name)
          .addField("Created On", message.guild.createdAt)
          .addField("Members Count", message.guild.memberCount)
@@ -108,7 +109,7 @@ bot.on("ready", async () => {
 
 
 
-    }
+    };
     
     
     
@@ -117,26 +118,7 @@ bot.on("ready", async () => {
     
     
     
-    if(cmd === `${prefix}botinfo`){
-      
-      let bicon = bot.user.displayAvatarURL;  
-      let botembed = new Discord.RichEmbed()
-       
-       .setColor("#48f442")
-       .setThumbnail(bicon)
-       .addField("Bot Name", bot.user.username)
-       .setDescription("Bot Created by Sissene !")
-       .addField("Created At", bot.user.createdAt);
-      
- 
-      
-      
-    return message.channel.send(botembed);
-    }
- 
-
-  
-});
+    
 
 
 
