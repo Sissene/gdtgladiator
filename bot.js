@@ -76,7 +76,7 @@ bot.on("ready", async () => {
 
     let sicon = bot.user.avatarURL;
     let serverembed = new Discord.RichEmbed()
-      .addField("Name", bot.user.name)
+      .addField("Name", bot.user.username)
       .setDescription("GDT Clan Bot")
       .setColor("#48f442")
       .setThumbnail(sicon)
