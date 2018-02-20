@@ -74,7 +74,7 @@ bot.on("ready", async () => {
   if(cmd === `${prefix}botinfo`){
 
     let sicon = bot.user.avatarURL;
-    let serverembed = new Discord.RichEmbed()
+    let botembed = new Discord.RichEmbed()
       .setAuthor("Owner")
       .setDescription("GDT Clan Bot")
       .setColor("#48f442")
@@ -83,7 +83,7 @@ bot.on("ready", async () => {
       
      
 
-      return message.channel.send(serverembed);
+      return message.channel.send(botembed);
 
 
 
@@ -97,7 +97,7 @@ bot.on("ready", async () => {
        let serverembed = new Discord.RichEmbed()
          .setThumbnail(sicon)
          .setColor("#48f442")
-         .addField("Server ID", "ID ="+message.guild.id)
+         .addField("Server ID", "ID : "+message.guild.id)
          .addField("Server Name", message.guild.name)
          .addField("Created On", message.guild.createdAt)
          .addField("Members Count", message.guild.memberCount)
