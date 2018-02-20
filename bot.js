@@ -21,10 +21,10 @@ bot.on("ready", async () => {
     //!kick @daeshan askin for it
 
     let kUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-    if(!kUser) return message.channel.send("Can't find user!");
+    if(!kUser) return message.channel.send("This User doesn't Exist !");
     let kReason = args.join(" ").slice(22);
     if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("No can do pal!");
-    if(kUser.hasPermission("MANAGE_MESSAGES")) return message.channel.send("That person can't be kicked!");
+    if(kUser.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Can't kick Person Higher Rank !");
 
     let kickEmbed = new Discord.RichEmbed()
     .setDescription("~Kick~")
