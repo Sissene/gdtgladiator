@@ -5,7 +5,7 @@ const bot = new Discord.Client({disableEveryone: true});
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online!`);
 
-  bot.user.setActivity("GDT2RC Soon !", {type: "WATCHING"})});
+  bot.user.setActivity("GDT2RC Soon !", {type: "PLAYING"})});
   
   bot.on("message", async message => {
     if(message.author.bot) return;
@@ -80,6 +80,7 @@ bot.on("ready", async () => {
       .setDescription("GDT Clan Bot")
       .setColor("#48f442")
       .setThumbnail(sicon)
+      .addField("Owner", "Sissene#0266")
       .addField("Created On", bot.user.createdAt)
       
      
