@@ -8,11 +8,11 @@ bot.on("ready", async () => {
   bot.user.setActivity("GDT2RC Soon !", {type: "WATCHING"})});
   
   bot.on('guildMemberAdd', member => {
-      eval  var text = "{server}" 
+      var text = "{server}" 
       let g = text.replace("{server}", msg.guild)
     const channel = member.guild.channels.find('name', 'join-leaves');
     if (!channel) return;
-    channel.send(`${member}, Welcome to (g) ! :wink: Have a great time :D !`);
+    channel.send(`${member}, Welcome to ${g} ! :wink: Have a great time :D !`);
     });
     
     
