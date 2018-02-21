@@ -7,6 +7,18 @@ bot.on("ready", async () => {
 
   bot.user.setActivity("GDT2RC Soon !", {type: "WATCHING"})});
   
+  client.on('guildMemberAdd', member => {
+    const channel = member.guild.channels.find('name', 'join-leave');
+    if (!channel) return;
+    channel.send(`Welcome to the server, ${member} Have a great Time !`);
+    });
+    
+    
+  
+
+
+
+
   bot.on("message", async message => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
