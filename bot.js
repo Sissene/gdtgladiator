@@ -8,7 +8,7 @@ bot.on("ready", async () => {
   bot.user.setActivity("GDT2RC Soon !", {type: "WATCHING"})});
   
   bot.on('guildMemberAdd', member => {
-      var text = "{server}" 
+      let text = "{server}" 
       let g = text.replace("{server}", msg.guild)
     const channel = member.guild.channels.find('name', 'join-leaves');
     if (!channel) return;
