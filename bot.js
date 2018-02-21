@@ -10,7 +10,7 @@ bot.on("ready", async () => {
   bot.on('guildMemberAdd', member => {
     const channel = member.guild.channels.find('name', 'join-leaves');
     if (!channel) return;
-    channel.send(`${member}, Welcome to **{server}**! :wink: Have a great time :D !`);
+    channel.send(`${member}, Welcome to **${server}**! :wink: Have a great time :D !`);
     });
     
     
