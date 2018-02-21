@@ -8,7 +8,7 @@ bot.on("ready", async () => {
   bot.user.setActivity("GDT2RC Soon !", {type: "WATCHING"})});
   
   client.on('guildMemberAdd', member => {
-    const channel = member.guild.channels.find('name', 'join-leave');
+    const channel = member.guild.channels.find('name', 'join-leaves');
     if (!channel) return;
     channel.send(`Welcome to the server, ${member} Have a great Time !`);
     });
